@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belou</title>
+  <link rel="stylesheet" href="css/index.css/style.css">
+  <link rel="stylesheet" href="css/portifolio.css/portifolio.css">
+  <link rel="stylesheet" href="css/index.css/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <nav>
+      <div class="menu">
+        <a href="index.html">Home</a>
+        <a href="portifolio.html">Portifólio</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </nav>
+
+  <main>
+    <section class="portfolio-hero">
+      <h1>Nosso Portfólio</h1>
+      <p>Confira alguns dos projetos que desenvolvemos para nossos clientes</p>
+    </section>
+
+    <section class="portfolio-projects">
+      <div class="projects-wrapper">
+        <!-- Dropdown para mobile -->
+        <div class="project-selector-mobile">
+          <label for="project-select">Selecione um projeto:</label>
+          <select id="project-select">
+            <option value="1">Projeto 1 - Site Moderno</option>
+            <option value="2">Projeto 2 - Landing Page</option>
+            <option value="3">Projeto 3 - Sistema Web</option>
+            <option value="4">Projeto 4 - E-commerce</option>
+            <option value="5">Projeto 5 - App Mobile</option>
+            <option value="6">Projeto 6 - Plataforma SaaS</option>
+          </select>
+        </div>
+
+        <!-- Sidebar com lista de projetos -->
+        <aside class="projects-sidebar">
+          <h3>Projetos</h3>
+          <div class="projects-list">
+            <button class="project-btn active" data-project="1">
+              <span class="project-name">Projeto 1</span>
+              <span class="project-category">Site Moderno</span>
+            </button>
+            <button class="project-btn" data-project="2">
+              <span class="project-name">Projeto 2</span>
+              <span class="project-category">Landing Page</span>
+            </button>
+            <button class="project-btn" data-project="3">
+              <span class="project-name">Projeto 3</span>
+              <span class="project-category">Sistema Web</span>
+            </button>
+            <button class="project-btn" data-project="4">
+              <span class="project-name">Projeto 4</span>
+              <span class="project-category">E-commerce</span>
+            </button>
+            <button class="project-btn" data-project="5">
+              <span class="project-name">Projeto 5</span>
+              <span class="project-category">App Mobile</span>
+            </button>
+            <button class="project-btn" data-project="6">
+              <span class="project-name">Projeto 6</span>
+              <span class="project-category">Plataforma SaaS</span>
+            </button>
+          </div>
+        </aside>
+
+        <!-- Detalhes do projeto -->
+        <section class="project-details">
+          <!-- Projeto 1 -->
+          <div class="project-detail active" id="project-1">
+            <img src="img/projeto1.jpg" alt="Projeto 1" class="project-detail-image">
+            <div class="project-detail-content">
+              <h2>Projeto 1</h2>
+              <p class="project-date">Concluído em 2025</p>
+              <p class="project-description">
+                Um site moderno desenvolvido com as melhores práticas de design e desenvolvimento web. 
+                Este projeto focou em criar uma experiência de usuário excepcional, combinando design elegante 
+                com funcionalidades robustas e performance otimizada.
+              </p>
+              <div class="project-details-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="project-details-info">
+                <div class="info-item">
+                  <h4>Cliente</h4>
+                  <p>Empresa de Tecnologia</p>
+                </div>
+                <div class="info-item">
+                  <h4>Resultado</h4>
+                  <p>Aumento de 150% em conversões</p>
+                </div>
+              </div>
+              <a href="#" class="btn-view-project">Visitar Site →</a>
+            </div>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div class="project-detail" id="project-2">
+            <img src="img/projeto2.jpg" alt="Projeto 2" class="project-detail-image">
+            <div class="project-detail-content">
+              <h2>Projeto 2</h2>
+              <p class="project-date">Concluído em 2025</p>
+              <p class="project-description">
+                Uma landing page otimizada para conversão com design responsivo de última geração. 
+                Implementamos técnicas avançadas de SEO, testes A/B e otimização de performance 
+                para maximizar os resultados do cliente.
+              </p>
+              <div class="project-details-tags">
+                <span class="tag">UI/UX</span>
+                <span class="tag">Responsive</span>
+                <span class="tag">Otimização</span>
+                <span class="tag">SEO</span>
+              </div>
+              <div class="project-details-info">
+                <div class="info-item">
+                  <h4>Cliente</h4>
+                  <p>Agência de Marketing</p>
+                </div>
+                <div class="info-item">
+                  <h4>Resultado</h4>
+                  <p>Taxa de conversão de 12%</p>
+                </div>
+              </div>
+              <a href="#" class="btn-view-project">Visitar Site →</a>
+            </div>
+          </div>
+
+          <!-- Projeto 3 -->
+          <div class="project-detail" id="project-3">
+            <img src="img/projeto3.jpg" alt="Projeto 3" class="project-detail-image">
+            <div class="project-detail-content">
+              <h2>Projeto 3</h2>
+              <p class="project-date">Concluído em 2025</p>
+              <p class="project-description">
+                Sistema web completo com banco de dados e autenticação de usuários. 
+                Desenvolvemos uma aplicação escalável com backend robusto, integração de APIs 
+                e painel administrativo intuitivo para gerenciamento de dados.
+              </p>
+              <div class="project-details-tags">
+                <span class="tag">Backend</span>
+                <span class="tag">Database</span>
+                <span class="tag">API</span>
+                <span class="tag">Admin Panel</span>
+              </div>
+              <div class="project-details-info">
+                <div class="info-item">
+                  <h4>Cliente</h4>
+                  <p>Startup de Software</p>
+                </div>
+                <div class="info-item">
+                  <h4>Resultado</h4>
+                  <p>Suporta 10mil usuários simultâneos</p>
+                </div>
+              </div>
+              <a href="#" class="btn-view-project">Acessar Sistema →</a>
+            </div>
+          </div>
+
+          <!-- Projeto 4 -->
+          <div class="project-detail" id="project-4">
+            <img src="img/projeto4.jpg" alt="Projeto 4" class="project-detail-image">
+            <div class="project-detail-content">
+              <h2>Projeto 4</h2>
+              <p class="project-date">Concluído em 2026</p>
+              <p class="project-description">
+                E-commerce completo com sistema de pagamento integrado e gerenciamento de inventário. 
+                Implementamos carrinho de compras otimizado, múltiplos gateways de pagamento, 
+                dashboard de vendas e integração com sistemas logísticos.
+              </p>
+              <div class="project-details-tags">
+                <span class="tag">E-commerce</span>
+                <span class="tag">Pagamento</span>
+                <span class="tag">Segurança</span>
+                <span class="tag">Inventory</span>
+              </div>
+              <div class="project-details-info">
+                <div class="info-item">
+                  <h4>Cliente</h4>
+                  <p>Loja Online Premium</p>
+                </div>
+                <div class="info-item">
+                  <h4>Resultado</h4>
+                  <p>Faturamento mensal de R$ 500k</p>
+                </div>
+              </div>
+              <a href="#" class="btn-view-project">Acessar Loja →</a>
+            </div>
+          </div>
+
+          <!-- Projeto 5 -->
+          <div class="project-detail" id="project-5">
+            <img src="img/projeto5.jpg" alt="Projeto 5" class="project-detail-image">
+            <div class="project-detail-content">
+              <h2>Projeto 5</h2>
+              <p class="project-date">Concluído em 2026</p>
+              <p class="project-description">
+                Aplicação mobile desenvolvida com tecnologias web modernas (PWA). 
+                Com suporte a offline, notificações push, integração com câmera e geolocalização. 
+                Disponível em Android, iOS e navegadores web.
+              </p>
+              <div class="project-details-tags">
+                <span class="tag">Mobile</span>
+                <span class="tag">PWA</span>
+                <span class="tag">Performance</span>
+                <span class="tag">Offline</span>
+              </div>
+              <div class="project-details-info">
+                <div class="info-item">
+                  <h4>Cliente</h4>
+                  <p>Empresa de Delivery</p>
+                </div>
+                <div class="info-item">
+                  <h4>Resultado</h4>
+                  <p>100mil downloads na loja</p>
+                </div>
+              </div>
+              <a href="#" class="btn-view-project">Baixar App →</a>
+            </div>
+          </div>
+
+          <!-- Projeto 6 -->
+          <div class="project-detail" id="project-6">
+            <img src="img/projeto6.jpg" alt="Projeto 6" class="project-detail-image">
+            <div class="project-detail-content">
+              <h2>Projeto 6</h2>
+              <p class="project-date">Concluído em 2026</p>
+              <p class="project-description">
+                Plataforma SaaS com autenticação, dashboard e relatórios avançados. 
+                Desenvolvemos uma solução enterprise com suporte a múltiplos usuários, 
+                integração com ferramentas de terceiros e análises detalhadas em tempo real.
+              </p>
+              <div class="project-details-tags">
+                <span class="tag">SaaS</span>
+                <span class="tag">Dashboard</span>
+                <span class="tag">Analytics</span>
+                <span class="tag">Enterprise</span>
+              </div>
+              <div class="project-details-info">
+                <div class="info-item">
+                  <h4>Cliente</h4>
+                  <p>Consultoria Empresarial</p>
+                </div>
+                <div class="info-item">
+                  <h4>Resultado</h4>
+                  <p>1000+ empresas usam a plataforma</p>
+                </div>
+              </div>
+              <a href="#" class="btn-view-project">Acessar Plataforma →</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Belou</h4>
+        <p>Transformamos ideias em experiências digitais.</p>
+        <div class="social-links">
+          <a href="#" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0m0 2c5.514 0 10 4.486 10 10s-4.486 10-10 10S2 17.514 2 12 6.486 2 12 2m3.5 12c0 1.93-1.57 3.5-3.5 3.5s-3.5-1.57-3.5-3.5 1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5m2.5-5.5c0 .828-.672 1.5-1.5 1.5S14.5 9.828 14.5 9s.672-1.5 1.5-1.5 1.5.672 1.5 1.5z"></path></svg></a>
+          <a href="#" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.731-2.004 1.44-.103.249-.129.597-.129.946v5.419h-3.554s.05-8.746 0-9.637h3.554v1.364c.43-.666 1.199-1.615 2.922-1.615 2.135 0 3.751 1.394 3.751 4.392v5.496zM5.337 9.432c-1.144 0-1.915-.758-1.915-1.707 0-.951.77-1.708 1.957-1.708 1.188 0 1.914.757 1.941 1.708 0 .949-.753 1.707-1.983 1.707zm1.582 11.02h-3.155V9.815h3.155v10.637zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Portfólio</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <p><strong>Email:</strong><br><a href="mailto:contato@belou.dev">contato@belou.dev</a></p>
+        <p><strong>Telefone:</strong><br><a href="tel:+5511999999999">+55 (11) 99999-9999</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Belou Agência Digital. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="#">Política de Privacidade</a>
+        <a href="#">Termos de Serviço</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Função para selecionar projeto
+    function selectProject(projectId) {
+      // Remove classe active de todos os botões e detalhes
+      document.querySelectorAll('.project-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.project-detail').forEach(detail => detail.classList.remove('active'));
+      
+      // Adiciona classe active ao botão e detalhe selecionados
+      document.querySelector(`.project-btn[data-project="${projectId}"]`).classList.add('active');
+      document.getElementById(`project-${projectId}`).classList.add('active');
+      
+      // Atualiza o select
+      document.getElementById('project-select').value = projectId;
+      
+      // Scroll para o detalhe em mobile
+      if (window.innerWidth < 768) {
+        document.querySelector('.project-details').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Funcionalidade dos botões de projetos
+    document.querySelectorAll('.project-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        const projectId = this.getAttribute('data-project');
+        selectProject(projectId);
+      });
+    });
+
+    // Funcionalidade do select dropdown
+    document.getElementById('project-select').addEventListener('change', function() {
+      selectProject(this.value);
+    });
+  </script>
+</body>
