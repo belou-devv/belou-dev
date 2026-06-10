@@ -268,10 +268,15 @@ body{
 
 /* Form Buttons */
 .form-buttons {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   margin-top: 25px;
+  justify-content: center;
+}
+
+.form-buttons button{
+  align-items: center;
 }
 
 .btn-whatsapp-submit {
