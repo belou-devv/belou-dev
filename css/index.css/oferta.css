@@ -1,46 +1,67 @@
 /* Seção de Ofertas */
 .oferta {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    padding: 80px 24px;
-    margin-top: 60px;
+    background: linear-gradient(135deg, var(--bg-dark-start) 0%, var(--bg-dark-end) 100%);
+    padding: 100px 24px;
+    position: relative;
+}
+
+.oferta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+    z-index: 0;
+    pointer-events: none;
 }
 
 .oferta h2 {
     text-align: center;
-    font-size: clamp(1.8rem, 5vw, 3rem);
-    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--text-primary-light);
     margin: 0 0 60px 0;
     font-weight: 900;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
 }
 
 .oferta-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 32px;
     max-width: 1120px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 40px 32px;
-    transition: all 0.4s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: var(--card-bg-dark);
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-lg);
+    padding: 48px 36px;
+    transition: var(--transition-bounce);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 300px;
+    min-height: 320px;
+    justify-content: flex-start;
 }
 
 .card-content {
     position: relative;
     z-index: 2;
-    transition: all 0.4s ease;
+    transition: var(--transition-smooth);
 }
 
 .card-image {
@@ -51,38 +72,35 @@
     right: 0;
     top: 0;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease, transform 0.5s ease;
     z-index: 1;
 }
 
 .card:hover {
-    background: rgba(79, 70, 229, 0.1);
-    border-color: rgba(79, 70, 229, 0.3);
-    transform: scale(1.08) translateY(-12px);
-    box-shadow: 0 30px 60px rgba(79, 70, 229, 0.3);
-    padding: 40px 32px;
+    background: rgba(17, 24, 39, 0.85);
+    border-color: var(--border-dark-hover);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4),
+                0 0 30px rgba(99, 102, 241, 0.15);
 }
 
 .card:hover .card-image {
-    opacity: 0.4;
-    z-index: 1;
-}
-
-.card:hover .card-content {
-    z-index: 3;
-    position: relative;
+    opacity: 0.2; /* Reduzido de 0.4 para garantir contraste de leitura */
+    transform: scale(1.08);
 }
 
 .card h3 {
-    font-size: 1.35rem;
-    color: #ffffff;
+    font-size: 1.4rem;
+    color: var(--text-primary-light);
     margin: 0 0 16px 0;
     font-weight: 700;
+    display: flex;
+    align-items: center;
 }
 
 .card p {
-    color: #b0b0b0;
-    line-height: 1.7;
+    color: var(--text-secondary-light);
+    line-height: 1.75;
     margin: 0;
     font-size: 0.95rem;
 }
@@ -92,20 +110,22 @@
     height: 28px;
     margin-right: 12px;
     display: inline-block;
-    color: #4f46e5;
-    transition: all 0.3s ease;
+    color: var(--primary);
+    transition: var(--transition-smooth);
     vertical-align: middle;
+    flex-shrink: 0;
 }
 
 .card:hover .icon {
-    color: #7c3aed;
-    transform: scale(1.1);
+    color: var(--accent);
+    transform: scale(1.1) rotate(3deg);
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
 }
 
 /* Responsivo para Ofertas */
 @media (max-width: 1024px) {
     .oferta {
-        padding: 60px 24px;
+        padding: 80px 24px;
     }
 
     .oferta-cards {
@@ -113,19 +133,17 @@
     }
 
     .card {
-        padding: 32px 28px;
+        padding: 40px 30px;
     }
 }
 
 @media (max-width: 768px) {
     .oferta {
-        padding: 50px 20px;
-        margin-top: 40px;
+        padding: 60px 20px;
     }
 
     .oferta h2 {
         margin-bottom: 40px;
-        font-size: 2rem;
     }
 
     .oferta-cards {
@@ -134,47 +152,7 @@
     }
 
     .card {
-        min-height: 250px;
-        padding: 30px 24px;
-    }
-
-    .card h3 {
-        font-size: 1.2rem;
-    }
-
-    .card p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .oferta {
-        padding: 40px 16px;
-        margin-top: 30px;
-    }
-
-    .oferta h2 {
-        margin-bottom: 32px;
-        font-size: 1.5rem;
-    }
-
-    .card {
-        min-height: 220px;
-        padding: 24px 20px;
-    }
-
-    .card h3 {
-        font-size: 1.1rem;
-        margin-bottom: 12px;
-    }
-
-    .card p {
-        font-size: 0.85rem;
-        line-height: 1.6;
-    }
-
-    .card .icon {
-        width: 24px;
-        height: 24px;
+        min-height: 260px;
+        padding: 32px 24px;
     }
 }
