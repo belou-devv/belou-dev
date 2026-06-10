@@ -1,5 +1,5 @@
 // Manipulador para enviar via Email
-document.getElementById('submitEmail')?.addEventListener('click', function() {
+document.getElementById('submitEmail')?.addEventListener('click', function () {
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -27,7 +27,7 @@ document.getElementById('submitEmail')?.addEventListener('click', function() {
 });
 
 // Manipulador para enviar via WhatsApp
-document.getElementById('submitWhatsApp')?.addEventListener('click', function() {
+document.getElementById('submitWhatsApp')?.addEventListener('click', function () {
   const name = document.getElementById('name').value.trim();
   const email = document.getElementById('email').value.trim();
   const phone = document.getElementById('phone').value.trim();
@@ -41,8 +41,7 @@ document.getElementById('submitWhatsApp')?.addEventListener('click', function() 
   }
 
   // Construir a mensagem para WhatsApp
-  const whatsappMessage = `Olá! Meu nome é ${name}%0D%0DAssunto: ${subject}%0D%0DMensagem: ${message}%0D%0DMeu email: ${email}${phone ? '%0DMeu telefone: ' + phone : ''}`;
-
+  const whatsappMessage = `Olá! Meu nome é ${name}%0A%0AAssunto: ${subject}%0A%0AMensagem: ${message}%0A%0AMeu email: ${email}${phone ? '%0A%0AMeu telefone: ' + phone : ''}`;
   // Abrir WhatsApp
   window.open(`https://wa.me/5545988379622?text=${whatsappMessage}`, '_blank');
 });
