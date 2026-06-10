@@ -119,6 +119,7 @@
   border-radius: 12px;
   padding: 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .project-detail {
@@ -142,11 +143,21 @@
 }
 
 .project-detail-image {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
+  width: 200px;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
   border-radius: 8px;
   margin-bottom: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-detail-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.15);
 }
 
 .project-detail-content h2 {
