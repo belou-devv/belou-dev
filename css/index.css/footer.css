@@ -1,6 +1,6 @@
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, var(--bg-dark-start) 0%, var(--bg-dark-end) 100%);
+    background: transparent;
     color: var(--text-secondary-light);
     margin-top: 60px;
     border-top: 1px solid var(--border-dark);

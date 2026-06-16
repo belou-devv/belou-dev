@@ -1,6 +1,6 @@
 /* Seção de Habilidades */
 .habilidades {
-    background: linear-gradient(135deg, var(--bg-light-start) 0%, var(--bg-light-end) 100%);
+    background: transparent;
     padding: 100px 24px;
     position: relative;
 }
