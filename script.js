@@ -17,3 +17,20 @@ document.getElementById('submitWhatsApp')?.addEventListener('click', function ()
   // Abrir WhatsApp
   window.open(`https://wa.me/5545988379622?text=${whatsappMessage}`, '_blank');
 });
+
+// Efeito de hover interativo letra por letra no título do Hero
+document.addEventListener('DOMContentLoaded', () => {
+  const heroTitle = document.querySelector('.hero-left h1');
+  if (heroTitle) {
+    const words = heroTitle.textContent.trim().split(/\s+/);
+    heroTitle.innerHTML = words
+      .map(word => {
+        const letters = word
+          .split('')
+          .map(char => `<span class="hover-char">${char}</span>`)
+          .join('');
+        return `<span class="word">${letters}</span>`;
+      })
+      .join(' ');
+  }
+});
